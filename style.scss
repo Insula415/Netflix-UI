@@ -1,24 +1,18 @@
-// Fonts
 @import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
 
-// Variables
 $font: "Lato", sans-serif;
 
-// Colors
 $red: #e50914;
 $black: #221f1f;
 $blackblack: #000000;
 $grey: #f5f5f1;
 $white: #ffffff;
 
-// General
 body {
 	background: $black;
 	color: $white;
 	font-family: $font;
 }
-
-// Typography
 
 h2 {
 	font-size: 24px;
@@ -34,9 +28,6 @@ p {
 	margin-bottom: 1em;
 }
 
-////////////
-// MIXINS //
-////////////
 @mixin generate-gradient($color, $amount) {
 	background: -moz-linear-gradient(
 		top,
@@ -56,11 +47,6 @@ p {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
-////////////////
-// COMPONENTS //
-////////////////
-
-// Header
 .Header {
 	@include generate-gradient($blackblack, 1);
 	display: flex;
@@ -73,7 +59,6 @@ p {
 	z-index: 5;
 }
 
-// Logo
 .Logo {
 	width: 151px;
 	height: 41px;
@@ -100,8 +85,6 @@ p {
 		}
 	}
 }
-
-// Navigation
 .Navigation {
 	ul {
 		display: flex;
@@ -123,8 +106,6 @@ p {
 		}
 	}
 }
-
-// Search
 .Search {
 	align-items: center;
 	justify-content: center;
@@ -158,11 +139,8 @@ p {
 	}
 }
 
-// UserProfile
 .UserProfile {
 	margin-left: auto;
-
-	// User
 	.User {
 		display: flex;
 
@@ -197,14 +175,11 @@ p {
 			}
 		}
 	}
-
-	// UserProfile-menu
 	.UserProfile-menu {
 		display: none;
 	}
 }
 
-// Hero Image
 .Hero {
 	width: 100%;
 	position: relative;
@@ -252,7 +227,6 @@ p {
 	}
 }
 
-// Button
 .Button {
 	background: transparent;
 	display: flex;
@@ -282,14 +256,12 @@ p {
 	}
 }
 
-// TitleList
 .Hero ~ .TitleList:nth-child(3) {
 	margin-top: -10vw;
 	position: relative;
 	z-index: 4;
 }
 
-// Hack for first after Hero
 .TitleList {
 	padding: 20px 40px;
 	box-sizing: border-box;
@@ -310,14 +282,11 @@ p {
 		justify-content: space-between;
 	}
 
-	// Animation
-
 	&[data-loaded="true"] {
 		opacity: 1;
 	}
 }
 
-// Item
 .Item {
 	width: calc(20% - 10px);
 	min-width: calc(20% - 10px);
